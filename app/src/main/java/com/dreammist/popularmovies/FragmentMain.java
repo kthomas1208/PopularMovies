@@ -1,13 +1,11 @@
 package com.dreammist.popularmovies;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -247,7 +245,6 @@ public class FragmentMain extends Fragment {
          * @param reader Null reader object for processing API response
          * @return An array of fully formed Movie objects
          */
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         private Movie[] processFavoritesList(HttpURLConnection urlConnection, BufferedReader reader) {
 
             // Get the movie IDs from the SharedPreferences

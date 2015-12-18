@@ -1,6 +1,5 @@
 package com.dreammist.popularmovies;
 
-import android.annotation.TargetApi;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +8,6 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -66,7 +64,6 @@ public class DetailActivity extends AppCompatActivity {
 
         public DetailFragment(){}
 
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -137,7 +134,6 @@ public class DetailActivity extends AppCompatActivity {
                 // Add movie to favorites list if selected and remove from favorites list if
                 // unselected
                 toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         SharedPreferences sharedPref = getActivity().getSharedPreferences(
                                 getString(R.string.favorites_pref),Context.MODE_PRIVATE);
